@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>Assignment 2</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="tellFortune()">
+    <div class="navbar">
+      <h6>SIFAT HASSAN</h6>
+      <ul>
+        <li><a href="#quote">Fortune</a></li>
+        <li><a href="#converter">Converter</a></li>
+        <li><a href="#calculator">Calculator</a></li>
+        <li><a href="#magic">Magic</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h2>Fortune Teller</h2>
+      <div class="content" id="quote">
+        <p id="fortune"></p>
+      </div>
+      <div class="color">
+        <button
+          onclick="changeColor(0);"
+          style="background: red"
+          title="click to change color"
+        ></button>
+        <button
+          onclick="changeColor(1);"
+          style="background: blue"
+          title="click to change color"
+        ></button>
+        <button
+          onclick="changeColor(2);"
+          style="background: green"
+          title="click to change color"
+        ></button>
+        <button
+          onclick="changeColor(3);"
+          style="background: yellow"
+          title="click to change color"
+        ></button>
+      </div>
+    </div>
+
+    <div>
+      <div id="converter" class="container">
+        <h2>Weight Converter</h2>
+        <div class="content">
+          <div>
+            <input
+              type="text"
+              name="fvalue"
+              value=""
+              id="fvalue"
+              size="10"
+              placeholder="enter value"
+              onkeyup="convert()"
+            />
+          </div>
+
+          <div>
+            <select id="convto" onchange="convert()">
+              <option>Kg to Pound</option>
+
+              <option>Pound to Kg</option>
+            </select>
+          </div>
+
+          <div id="result"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="calculator" class="container">
+      <h2>
+        Calculate Min, Max, Average, Reverse and Sum for a series of numbers.
+      </h2>
+      <div class="content">
+        <input
+          type="text"
+          name="nvlaue"
+          id="nvalue"
+          placeholder="enter numbers"
+          onkeyup="calculator()"
+        />
+
+        <p>Max : <span id="max"></span></p>
+
+        <p>Min : <span id="min"></span></p>
+
+        <p>Sum : <span id="sum"></span></p>
+
+        <p>Reverse : <span id="reverse"></span></p>
+
+        <p>Average : <span id="avg"></span></p>
+      </div>
+    </div>
+
+    <div id="magic" class="container">
+      <h2>Magic!</h2>
+      <div class="content">
+        <textarea id="string"> </textarea>
+      </div>
+      <button onclick="clearText()">Clear</button>
+      <button onclick="capitalize()" id="caps" value="OFF">Capitalize</button>
+      <button onclick="sortText()">Sort</button>
+      <button onclick="reverseText()">Reverse</button>
+      <button onclick="strip()">Strip Blank</button>
+      <button onclick="addNumber()">Add Numbers</button>
+      <button onclick="shuffle()">Shuffle</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
